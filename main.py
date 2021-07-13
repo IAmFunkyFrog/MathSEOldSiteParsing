@@ -261,7 +261,7 @@ def get_2016_reports():
         # Скачиваем текст
         text_uri = anchors[0].get('href')
         extension = splitext(text_uri)[1]
-        text_filename = author_en + "_Bachelor_Report_2017_text" + extension
+        text_filename = author_en + "_Bachelor_Report_2016_text" + extension
         print("Download text: " + text_filename)
         download_file(url + "/" + text_uri, text_filename, TEXT_PATH)
 
@@ -317,14 +317,14 @@ def get_2016_reports():
         # Скачиваем текст
         text_uri = anchors[0].get('href')
         text_extension = splitext(text_uri)[1]
-        text_filename = author_en + "_Bachelor_Report_2017_text" + text_extension
+        text_filename = author_en + "_Bachelor_Report_2016_text" + text_extension
         print("Download text: " + text_filename)
         download_file(url + "/" + text_uri, text_filename, TEXT_PATH)
 
         # Скачиваем слайды
         slides_uri = anchors[1].get('href')
         slides_extension = splitext(slides_uri)[1]
-        slides_filename = author_en + "_Bachelor_Report_2017_slides" + slides_extension
+        slides_filename = author_en + "_Bachelor_Report_2016_slides" + slides_extension
         print("Download slides: " + slides_filename)
         download_file(url + "/" + slides_uri, slides_filename, SLIDES_PATH)
 
@@ -333,7 +333,7 @@ def get_2016_reports():
         if len(anchors) > 2:
             supervisor_review_uri = anchors[2].get('href')
             supervisor_review_extension = splitext(supervisor_review_uri)[1]
-            supervisor_review_filename = author_en + "_Bachelor_Report_2017_supervisor_review" + supervisor_review_extension
+            supervisor_review_filename = author_en + "_Bachelor_Report_2016_supervisor_review" + supervisor_review_extension
             print("Download supervisor review: " + supervisor_review_filename)
             download_file(url + "/" + supervisor_review_uri, supervisor_review_filename, SUPERVISOR_REVIEW_PATH)
 
@@ -364,7 +364,7 @@ def get_2016_reports():
         print("Supervisor: " + supervisor)
 
         thesis_info = {'type_id': 2, 'course_id': 2, 'name_ru': name, 'author': author,
-                       'supervisor': supervisor, 'publish_year': 2017,
+                       'supervisor': supervisor, 'publish_year': 2016,
                        'secret_key': 'e789ec3741a6bd9f2d18c2dd6c074dda'}
 
         report_text = "report/text/" + text_filename
@@ -403,14 +403,14 @@ def get_2016_reports():
         # Скачиваем текст
         text_uri = anchors[0].get('href')
         text_extension = splitext(text_uri)[1]
-        text_filename = author_en + "_Bachelor_Report_2017_text" + text_extension
+        text_filename = author_en + "_Bachelor_Report_2016_text" + text_extension
         print("Download text: " + text_filename)
         download_file(url + "/" + text_uri, text_filename, TEXT_PATH)
 
         # Скачиваем слайды
         slides_uri = anchors[1].get('href')
         slides_extension = splitext(slides_uri)[1]
-        slides_filename = author_en + "_Bachelor_Report_2017_slides" + slides_extension
+        slides_filename = author_en + "_Bachelor_Report_2016_slides" + slides_extension
         print("Download slides: " + slides_filename)
         download_file(url + "/" + slides_uri, slides_filename, SLIDES_PATH)
 
@@ -419,7 +419,7 @@ def get_2016_reports():
         if len(anchors) > 2:
             supervisor_review_uri = anchors[2].get('href')
             supervisor_review_extension = splitext(supervisor_review_uri)[1]
-            supervisor_review_filename = author_en + "_Bachelor_Report_2017_supervisor_review" + supervisor_review_extension
+            supervisor_review_filename = author_en + "_Bachelor_Report_2016_supervisor_review" + supervisor_review_extension
             print("Download supervisor review: " + supervisor_review_filename)
             download_file(url + "/" + supervisor_review_uri, supervisor_review_filename, SUPERVISOR_REVIEW_PATH)
 
@@ -450,7 +450,7 @@ def get_2016_reports():
         print("Supervisor: " + supervisor)
 
         thesis_info = {'type_id': 2, 'course_id': 1, 'name_ru': name, 'author': author,
-                       'supervisor': supervisor, 'publish_year': 2017,
+                       'supervisor': supervisor, 'publish_year': 2016,
                        'secret_key': 'e789ec3741a6bd9f2d18c2dd6c074dda'}
 
         report_text = "report/text/" + text_filename
