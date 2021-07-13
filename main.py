@@ -50,7 +50,7 @@ def download_file(uri, safe_filename, save_path="./report/"):
         print("Downloaded " + safe_filename)
 
 
-def get_2017():
+def get_2017_reports():
     session = requests.session()
     url = 'https://oops.math.spbu.ru/SE/YearlyProjects/spring-2017'
 
@@ -207,4 +207,4 @@ def get_2017():
         print(str(r.content, 'utf-8'))
 
 if __name__ == '__main__':
-    get_2017()
+    get_2017_reports()
