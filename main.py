@@ -30,7 +30,6 @@ SUPERVISORS = (
     'Губанов',
     'Сартасов',
     'Брыксин',
-    'Терехов',
     'Амелин',
     'Иноземцев',
     'Давыденко',
@@ -46,14 +45,15 @@ SUPERVISORS = (
     'Дымникова',
     'Чурилин',
     'Николенко',
-    'Смирнов'
+    'Смирнов',
+    'Терехов'
 )
 
 # Флаг скачки файлов с сайта
 download = False
 
 # Флаг загрузки файлов на сайт
-UPLOAD_FLAG = False
+UPLOAD_FLAG = True
 
 
 def download_file(uri, safe_filename, save_path="./report/"):
@@ -75,7 +75,11 @@ def download_file(uri, safe_filename, save_path="./report/"):
 
 def get_supervisor_from_text(text):
     print("Text of work " + text)
-    supervisor_re = re.search(r".{150}Научный\sруководитель.{150}", text)[0]
+    try:
+        supervisor_re = re.search(r".{250}Научный\sруководитель.{250}", text)[0]
+    except TypeError:
+        print("Error with parsing text file")
+        return ''
     supervisor = ''
     print("String that must contain supervisor: " + supervisor_re)
     for supervisor_string in SUPERVISORS:
@@ -87,11 +91,11 @@ def get_supervisor_from_text(text):
 
 
 def get_supervisor_from_file(path):
-    text_extension = splitext(path)[1]
+    text_extension = splitext(path)[-1]
     text_of_work = ''
-    if text_extension == '.pdf':
+    if text_extension.find('.pdf', 0) > -1:
         text_of_work = high_level.extract_text(path)
-    elif text_extension == '.doc' or text_extension == '.docx':
+    elif text_extension.find('.doc', 0) > -1 or text_extension.find('.docx', 0) > -1:
         document = docx.Document(path)
         for paragraph in document.paragraphs:
             text_of_work = text_of_work + paragraph.text + ' '
@@ -123,13 +127,13 @@ def upload_on_site(thesis_info, text_filename, slides_filename='', supervisor_re
 
 
 def get_text_filename(author_en, year, extension):
-    return author_en + "_Bachelor_Report_" + year + "_text" + extension
+    return author_en + "_Bachelor_Report_" + str(year) + "_text" + extension
 
 def get_slides_filename(author_en, year, extension):
-    return author_en + "_Bachelor_Report_" + year + "_slides" + extension
+    return author_en + "_Bachelor_Report_" + str(year) + "_slides" + extension
 
 def get_supervisor_review_filename(author_en, year, extension):
-    return author_en + "_Bachelor_Report_" + year + "_supervisor_review" + extension
+    return author_en + "_Bachelor_Report_" + str(year) + "_supervisor_review" + extension
 
 
 def get_2017_reports():
@@ -184,7 +188,7 @@ def get_2017_reports():
         download_file(url + "/" + supervisor_review_uri, supervisor_review_filename, SUPERVISOR_REVIEW_PATH)
 
         # Достаем имя научника
-        supervisor = get_supervisor_from_file('report/text/' + text_filename)
+        supervisor = get_supervisor_from_file(TEXT_PATH + text_filename)
 
         if supervisor == '':
             print("Error while parsing supervisor")
@@ -293,7 +297,7 @@ def get_2016_reports():
         download_file(url + "/" + text_uri, text_filename, TEXT_PATH)
 
         # Достаем имя научника
-        supervisor = get_supervisor_from_file('report/text/' + text_filename)
+        supervisor = get_supervisor_from_file(TEXT_PATH + text_filename)
 
         if supervisor == '':
             print("Error while parsing supervisor")
@@ -351,7 +355,7 @@ def get_2016_reports():
             download_file(url + "/" + supervisor_review_uri, supervisor_review_filename, SUPERVISOR_REVIEW_PATH)
 
         # Достаем имя научника
-        supervisor = get_supervisor_from_file('report/text/' + text_filename)
+        supervisor = get_supervisor_from_file(TEXT_PATH + text_filename)
 
         if supervisor == '':
             print("Error while parsing supervisor")
@@ -408,7 +412,7 @@ def get_2016_reports():
             download_file(url + "/" + supervisor_review_uri, supervisor_review_filename, SUPERVISOR_REVIEW_PATH)
 
         # Достаем имя научника
-        supervisor = get_supervisor_from_file('report/text/' + text_filename)
+        supervisor = get_supervisor_from_file(TEXT_PATH + text_filename)
 
         if supervisor == '':
             print("Error while parsing supervisor")
@@ -423,7 +427,68 @@ def get_2016_reports():
 
         upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
 
+def get_2015_fall():
+    session = requests.session()
+    url = 'https://oops.math.spbu.ru/SE/YearlyProjects/autumn-2015/magistracy-564'
+    year = 2015
+
+    response = session.get(url)
+
+    if response.status_code != 200:
+        print("Response status " + str(response.status_code))
+        sys.exit(0)
+
+    soup = BeautifulSoup(response.text, "lxml")
+    spans = soup.select('.summary')
+
+    # Переберем всех магистров 546 группы
+    for span in spans:
+        anchor = span.find('a')
+        splited_author_and_theme = anchor.text.split('. ')
+        author = splited_author_and_theme[0]
+        author_en = translit(author, 'ru', reversed=True).replace(" ", "_")
+        name = splited_author_and_theme[1]
+
+        # Находим текст
+        response = session.get(anchor.get("href"))
+
+        if response.status_code != 200:
+            print("Response status " + str(response.status_code))
+            sys.exit(0)
+
+        text_soup = BeautifulSoup(response.text, "lxml")
+        anchors_to_text = text_soup.find_all('a')
+        text_filename = ''
+        for a in anchors_to_text:
+            if a.text.find(author, 0) > -1:
+                text_extension = splitext(a.text)[1].replace('\n', '')
+                text_filename = get_text_filename(author_en, year, text_extension)
+                print("Download " + text_filename)
+                download_file(a.get('href'), text_filename, TEXT_PATH)
+                break
+
+        if text_filename == '':
+            print("Error while parsing text filename")
+            continue
+
+        # Находим имя научника
+        supervisor = get_supervisor_from_file(TEXT_PATH + text_filename)
+
+        if supervisor == '':
+            print("Error while parsing supervisor")
+            continue
+
+        print("Supervisor: " + supervisor)
+
+        # Генерируем метаинформацию и загружаем
+        thesis_info = {'type_id': 2, 'course_id': 3, 'name_ru': name, 'author': author,
+                       'supervisor': supervisor, 'publish_year': year,
+                       'secret_key': 'e789ec3741a6bd9f2d18c2dd6c074dda'}
+
+        upload_on_site(thesis_info, text_filename)
+        
 
 if __name__ == '__main__':
-    get_2016_reports()
-    get_2017_reports()
+    get_2015_fall()
+    #get_2016_reports()
+    #get_2017_reports()
