@@ -12,9 +12,9 @@ import json
 import docx
 
 UPLOAD_URL = "https://se.math.spbu.ru/post_theses"
-TEXT_PATH = "./report/text/"
-SLIDES_PATH = "./report/slides/"
-SUPERVISOR_REVIEW_PATH = "./report/review/"
+TEXT_PATH = "/media/stepan-trefilov/Share/report/text/"
+SLIDES_PATH = "/media/stepan-trefilov/Share/report/slides/"
+SUPERVISOR_REVIEW_PATH = "/media/stepan-trefilov/Share/report/review/"
 
 SUPERVISORS = (
     'Кириленко',
@@ -76,7 +76,7 @@ SUPERVISORS = (
 download = True
 
 # Флаг загрузки файлов на сайт
-UPLOAD_FLAG = True
+UPLOAD_FLAG = False
 
 
 def download_file(uri, safe_filename, save_path="./report/"):
@@ -86,14 +86,8 @@ def download_file(uri, safe_filename, save_path="./report/"):
         return
 
     r = requests.get(uri, allow_redirects=True)
-    open(safe_filename, 'wb').write(r.content)
-    try:
-        os.rename(safe_filename, save_path + safe_filename)
-    except FileExistsError:
-        print("File already exists " + safe_filename)
-        os.remove(safe_filename)
-    else:
-        print("Downloaded " + safe_filename)
+    open(save_path + safe_filename, 'wb').write(r.content)
+    print("Downloaded " + safe_filename)
 
 
 def rename_file(old_filename, new_filename):
