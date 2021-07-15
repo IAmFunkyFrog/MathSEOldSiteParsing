@@ -69,11 +69,15 @@ SUPERVISORS = (
     'Семихатский',
     'Соломатов',
     'Данильченко',
-    'Петров'
+    'Петров',
+    'Зеленчук',
+    'Николаев',
+    'Абусалимов',
+    'Белогрудов'
 )
 
 # Флаг скачки файлов с сайта
-download = True
+download = False
 
 # Флаг загрузки файлов на сайт
 UPLOAD_FLAG = False
@@ -99,8 +103,8 @@ def get_supervisor_from_text(text):
     try:
         supervisor_re = re.search(r".{0,250}[Нн]аучный\sруководитель.{0,250}", text)[0]
     except TypeError:
+        supervisor_re = text
         print("Error with parsing text")
-        return ''
     supervisor = ''
     print("String that must contain supervisor: " + supervisor_re)
     for supervisor_string in SUPERVISORS:
@@ -116,7 +120,11 @@ def get_supervisor_from_file(path):
     if text_extension.find('.pdf', 0) > -1:
         text_of_work = high_level.extract_text(path)
     elif text_extension.find('.doc', 0) > -1 or text_extension.find('.docx', 0) > -1:
-        document = docx.Document(path)
+        try:
+            document = docx.Document(path)
+        except KeyError:
+            print("Ошибка парсинга doc")
+            return ''
         for paragraph in document.paragraphs:
             text_of_work = text_of_work + paragraph.text + ' '
     text_of_work = text_of_work.replace('\n', ' ')
@@ -861,8 +869,271 @@ def get_2014():
         upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
 
 
+def get_2013():
+    session = requests.session()
+    url = 'https://oops.math.spbu.ru/SE/YearlyProjects/2013/list'
+    year = 2013
+
+    response = session.get(url)
+
+    if response.status_code != 200:
+        print("Response status " + str(response.status_code))
+        sys.exit(0)
+
+    soup = BeautifulSoup(response.text, "lxml")
+    uls = soup.find('h3', text='341 группа').parent.find_all('ul')
+
+    # Парсинг 341 группы
+    for li in uls[0].find_all('li'):
+        surname = li.find('b').text.split('.')[-1].replace(' ', '')
+
+        anchors = li.find_all('a')
+
+        # Достаем текст
+        text_anchor = li.find('a', text='Отчёт')
+        text_uri = text_anchor.get('href')
+        text_extension = splitext(text_uri)[-1]
+        text_tmp_name = get_text_filename(surname, year, text_extension)
+        print("Download tmp text: " + text_tmp_name)
+        download_file(url + "/" + text_uri, text_tmp_name, TEXT_PATH)
+
+        # Достаем имя студента из текста
+        author = li.find('b').text.lstrip()
+        author_en = translit(author, 'ru', reversed=True).replace(" ", "_")
+        name = re.search(re.compile(author + "\s+(.+)"), li.text)[1]
+        print("Work name " + name)
+
+        print("Removing tmp text " + text_tmp_name)
+        if download:
+            os.remove(TEXT_PATH + text_tmp_name)
+        text_filename = get_text_filename(author_en, year, text_extension)
+        print("Downloading text " + text_filename)
+        download_file(url + "/" + text_uri, text_filename, TEXT_PATH)
+
+        # Достаем научника
+        supervisor = get_supervisor_from_file(TEXT_PATH + text_filename)
+
+        if supervisor == '':
+            print("Error while parsing supervisor")
+            continue
+        print("Supervisor " + supervisor)
+
+        # Достаем слайды
+        slides_anchor = li.find('a', text='Презентация')
+        slides_filename = ''
+        if slides_anchor is not None:
+            slides_uri = slides_anchor.get('href')
+            slides_extension = splitext(slides_uri)[1]
+            slides_filename = get_slides_filename(author_en, year, slides_extension)
+            print("Download slides: " + slides_filename)
+            download_file(url + "/" + slides_uri, slides_filename, SLIDES_PATH)
+
+        # Достаем отзыв научника
+        supervisor_review_anchor = li.find('a', text='Отзыв')
+        supervisor_review_filename = ''
+        if supervisor_review_anchor is not None:
+            supervisor_review_uri = supervisor_review_anchor.get('href')
+            supervisor_review_extension = splitext(supervisor_review_uri)[1]
+            supervisor_review_filename = get_supervisor_review_filename(author_en, year, supervisor_review_extension)
+            print("Download supervisor review: " + supervisor_review_filename)
+            download_file(url + "/" + supervisor_review_uri, supervisor_review_filename, SUPERVISOR_REVIEW_PATH)
+
+        # Генерируем метаинформацию и загружаем
+        thesis_info = {'type_id': 2, 'course_id': 1, 'name_ru': name, 'author': author,
+                      'supervisor': supervisor, 'publish_year': year,
+                      'secret_key': 'e789ec3741a6bd9f2d18c2dd6c074dda'}
+
+        upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
+
+        # Парсинг 344 группы
+        for li in uls[1].find_all('li'):
+            surname = li.find('b').text.split('.')[-1].replace(' ', '')
+
+            anchors = li.find_all('a')
+            # Достаем текст
+            text_anchor = li.find('a', text='Отчёт')
+            text_uri = text_anchor.get('href')
+            text_extension = splitext(text_uri)[-1]
+            text_tmp_name = get_text_filename(surname, year, text_extension)
+            print("Download tmp text: " + text_tmp_name)
+            download_file(url + "/" + text_uri, text_tmp_name, TEXT_PATH)
+
+            # Достаем имя студента из текста
+            author = li.find('b').text.lstrip()
+            author_en = translit(author, 'ru', reversed=True).replace(" ", "_")
+            name = re.search(re.compile(author + "\s+(.+)"), li.text)[1]
+            print("Work name " + name)
+
+            print("Removing tmp text " + text_tmp_name)
+            if download:
+                os.remove(TEXT_PATH + text_tmp_name)
+            text_filename = get_text_filename(author_en, year, text_extension)
+            print("Downloading text " + text_filename)
+            download_file(url + "/" + text_uri, text_filename, TEXT_PATH)
+
+            # Достаем научника
+            supervisor = get_supervisor_from_file(TEXT_PATH + text_filename)
+
+            if supervisor == '':
+                print("Error while parsing supervisor")
+                continue
+            print("Supervisor " + supervisor)
+
+            # Достаем слайды
+            slides_anchor = li.find('a', text='Презентация')
+            slides_filename = ''
+            if slides_anchor is not None:
+                slides_uri = slides_anchor.get('href')
+                slides_extension = splitext(slides_uri)[1]
+                slides_filename = get_slides_filename(author_en, year, slides_extension)
+                print("Download slides: " + slides_filename)
+                download_file(url + "/" + slides_uri, slides_filename, SLIDES_PATH)
+
+            # Достаем отзыв научника
+            supervisor_review_anchor = li.find('a', text='Отзыв')
+            supervisor_review_filename = ''
+            if supervisor_review_anchor is not None:
+                supervisor_review_uri = supervisor_review_anchor.get('href')
+                supervisor_review_extension = splitext(supervisor_review_uri)[1]
+                supervisor_review_filename = get_supervisor_review_filename(author_en, year,
+                                                                            supervisor_review_extension)
+                print("Download supervisor review: " + supervisor_review_filename)
+                download_file(url + "/" + supervisor_review_uri, supervisor_review_filename, SUPERVISOR_REVIEW_PATH)
+
+            # Генерируем метаинформацию и загружаем
+            thesis_info = {'type_id': 2, 'course_id': 1, 'name_ru': name, 'author': author,
+                           'supervisor': supervisor, 'publish_year': year,
+                           'secret_key': 'e789ec3741a6bd9f2d18c2dd6c074dda'}
+
+            upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
+
+    # Парсинг 361 группы
+    for li in uls[2].find_all('li'):
+        surname = li.find('b').text.split('.')[-1].replace(' ', '')
+
+        anchors = li.find_all('a')
+        # Достаем текст
+        text_anchor = li.find('a', text='Отчёт')
+        text_uri = text_anchor.get('href')
+        text_extension = splitext(text_uri)[-1]
+        text_tmp_name = get_text_filename(surname, year, text_extension)
+        print("Download tmp text: " + text_tmp_name)
+        download_file(url + "/" + text_uri, text_tmp_name, TEXT_PATH)
+
+        # Достаем имя студента из текста
+        author = li.find('b').text.lstrip()
+        author_en = translit(author, 'ru', reversed=True).replace(" ", "_")
+        name = re.search(re.compile(author + "\s+(.+)"), li.text)[1]
+        print("Work name " + name)
+
+        print("Removing tmp text " + text_tmp_name)
+        if download:
+            os.remove(TEXT_PATH + text_tmp_name)
+        text_filename = get_text_filename(author_en, year, text_extension)
+        print("Downloading text " + text_filename)
+        download_file(url + "/" + text_uri, text_filename, TEXT_PATH)
+
+        # Достаем научника
+        supervisor = get_supervisor_from_file(TEXT_PATH + text_filename)
+
+        if supervisor == '':
+            print("Error while parsing supervisor")
+            continue
+        print("Supervisor " + supervisor)
+
+        # Достаем слайды
+        slides_anchor = li.find('a', text='Презентация')
+        slides_filename = ''
+        if slides_anchor is not None:
+            slides_uri = slides_anchor.get('href')
+            slides_extension = splitext(slides_uri)[1]
+            slides_filename = get_slides_filename(author_en, year, slides_extension)
+            print("Download slides: " + slides_filename)
+            download_file(url + "/" + slides_uri, slides_filename, SLIDES_PATH)
+
+        # Достаем отзыв научника
+        supervisor_review_anchor = li.find('a', text='Отзыв')
+        supervisor_review_filename = ''
+        if supervisor_review_anchor is not None:
+            supervisor_review_uri = supervisor_review_anchor.get('href')
+            supervisor_review_extension = splitext(supervisor_review_uri)[1]
+            supervisor_review_filename = get_supervisor_review_filename(author_en, year, supervisor_review_extension)
+            print("Download supervisor review: " + supervisor_review_filename)
+            download_file(url + "/" + supervisor_review_uri, supervisor_review_filename, SUPERVISOR_REVIEW_PATH)
+
+        # Генерируем метаинформацию и загружаем
+        # TODO: попросить у зеленчука добавить 361 группу в бд и поменять course_id
+        thesis_info = {'type_id': 2, 'course_id': 1, 'name_ru': name, 'author': author,
+                      'supervisor': supervisor, 'publish_year': year,
+                      'secret_key': 'e789ec3741a6bd9f2d18c2dd6c074dda'}
+
+        upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
+
+    # Парсинг 445 группы
+    for li in uls[3].find_all('li'):
+        surname = li.find('b').text.split('.')[-1].replace(' ', '')
+
+        anchors = li.find_all('a')
+        # Достаем текст
+        text_anchor = li.find('a', text='Отчёт')
+        text_uri = text_anchor.get('href')
+        text_extension = splitext(text_uri)[-1]
+        text_tmp_name = get_text_filename(surname, year, text_extension)
+        print("Download tmp text: " + text_tmp_name)
+        download_file(url + "/" + text_uri, text_tmp_name, TEXT_PATH)
+
+        # Достаем имя студента из текста
+        author = li.find('b').text.lstrip()
+        author_en = translit(author, 'ru', reversed=True).replace(" ", "_")
+        name = re.search(re.compile(author + "\s+(.+)"), li.text)[1]
+        print("Work name " + name)
+
+        print("Removing tmp text " + text_tmp_name)
+        if download:
+            os.remove(TEXT_PATH + text_tmp_name)
+        text_filename = get_text_filename(author_en, year, text_extension)
+        print("Downloading text " + text_filename)
+        download_file(url + "/" + text_uri, text_filename, TEXT_PATH)
+
+        # Достаем научника
+        supervisor = get_supervisor_from_file(TEXT_PATH + text_filename)
+
+        if supervisor == '':
+            print("Error while parsing supervisor")
+            continue
+        print("Supervisor " + supervisor)
+
+        # Достаем слайды
+        slides_anchor = li.find('a', text='Презентация')
+        slides_filename = ''
+        if slides_anchor is not None:
+            slides_uri = slides_anchor.get('href')
+            slides_extension = splitext(slides_uri)[1]
+            slides_filename = get_slides_filename(author_en, year, slides_extension)
+            print("Download slides: " + slides_filename)
+            download_file(url + "/" + slides_uri, slides_filename, SLIDES_PATH)
+
+        # Достаем отзыв научника
+        supervisor_review_anchor = li.find('a', text='Отзыв')
+        supervisor_review_filename = ''
+        if supervisor_review_anchor is not None:
+            supervisor_review_uri = supervisor_review_anchor.get('href')
+            supervisor_review_extension = splitext(supervisor_review_uri)[1]
+            supervisor_review_filename = get_supervisor_review_filename(author_en, year, supervisor_review_extension)
+            print("Download supervisor review: " + supervisor_review_filename)
+            download_file(url + "/" + supervisor_review_uri, supervisor_review_filename, SUPERVISOR_REVIEW_PATH)
+
+        # Генерируем метаинформацию и загружаем
+        thesis_info = {'type_id': 2, 'course_id': 1, 'name_ru': name, 'author': author,
+                      'supervisor': supervisor, 'publish_year': year,
+                      'secret_key': 'e789ec3741a6bd9f2d18c2dd6c074dda'}
+
+        upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
+
+
 if __name__ == '__main__':
-    get_2014()
+    get_2013()
+    # get_2014()
     # get_2015_spring()
     # get_2015_fall()
     # get_2016_reports()
