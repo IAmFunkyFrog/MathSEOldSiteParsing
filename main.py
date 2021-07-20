@@ -11,6 +11,7 @@ import re
 import json
 import docx
 
+SECRET_KEY = '83f330c86be3e4bd680bc6e27c514ead'
 UPLOAD_URL = "https://se.math.spbu.ru/post_theses"
 TEXT_PATH = "/media/stepan-trefilov/Share/report/text/"
 SLIDES_PATH = "/media/stepan-trefilov/Share/report/slides/"
@@ -244,7 +245,7 @@ def get_2017_reports():
 
         thesis_info = {'type_id': 2, 'course_id': 2, 'name_ru': name, 'author': author,
                        'supervisor': supervisor, 'publish_year': year,
-                       'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'}
+                       'secret_key': SECRET_KEY}
 
         upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
 
@@ -298,7 +299,7 @@ def get_2017_reports():
 
         thesis_info = {'type_id': 2, 'course_id': 1, 'name_ru': name, 'author': author,
                        'supervisor': supervisor, 'publish_year': year,
-                       'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'}
+                       'secret_key': SECRET_KEY}
 
         upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
 
@@ -353,7 +354,7 @@ def get_2016_reports():
 
         thesis_info = {'type_id': 2, 'course_id': 3, 'name_ru': name, 'author': author,
                        'supervisor': supervisor, 'publish_year': year,
-                       'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'}
+                       'secret_key': SECRET_KEY}
 
         upload_on_site(thesis_info, text_filename)
 
@@ -410,7 +411,7 @@ def get_2016_reports():
         # Генерируем метаинформацию и загружаем
         thesis_info = {'type_id': 2, 'course_id': 2, 'name_ru': name, 'author': author,
                        'supervisor': supervisor, 'publish_year': year,
-                       'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'}
+                       'secret_key': SECRET_KEY}
 
         upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
 
@@ -467,7 +468,7 @@ def get_2016_reports():
         # Генерируем метаинформацию и загружаем
         thesis_info = {'type_id': 2, 'course_id': 1, 'name_ru': name, 'author': author,
                        'supervisor': supervisor, 'publish_year': year,
-                       'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'}
+                       'secret_key': SECRET_KEY}
 
         upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
 
@@ -528,7 +529,7 @@ def get_2015_fall():
         # Генерируем метаинформацию и загружаем
         thesis_info = {'type_id': 2, 'course_id': 3, 'name_ru': name, 'author': author,
                        'supervisor': supervisor, 'publish_year': year,
-                       'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'}
+                       'secret_key': SECRET_KEY}
 
         upload_on_site(thesis_info, text_filename)
 
@@ -615,7 +616,7 @@ def get_2015_spring():
         # Генерируем метаинформацию и загружаем
         thesis_info = {'type_id': 2, 'course_id': 1, 'name_ru': name, 'author': author,
                       'supervisor': supervisor, 'publish_year': year,
-                      'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'}
+                      'secret_key': SECRET_KEY}
 
         upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
 
@@ -687,7 +688,7 @@ def get_2015_spring():
         # Генерируем метаинформацию и загружаем
         thesis_info = {'type_id': 2, 'course_id': 2, 'name_ru': name, 'author': author,
                       'supervisor': supervisor, 'publish_year': year,
-                      'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'}
+                      'secret_key': SECRET_KEY}
 
         upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
 
@@ -761,7 +762,7 @@ def get_2014():
         # Генерируем метаинформацию и загружаем
         thesis_info = {'type_id': 2, 'course_id': 1, 'name_ru': name, 'author': author,
                       'supervisor': supervisor, 'publish_year': year,
-                      'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'}
+                      'secret_key': SECRET_KEY}
 
         upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
 
@@ -821,7 +822,7 @@ def get_2014():
         # Генерируем метаинформацию и загружаем
         thesis_info = {'type_id': 2, 'course_id': 2, 'name_ru': name, 'author': author,
                       'supervisor': supervisor, 'publish_year': year,
-                      'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'}
+                      'secret_key': SECRET_KEY}
 
         upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
 
@@ -881,7 +882,7 @@ def get_2014():
         # Генерируем метаинформацию и загружаем
         thesis_info = {'type_id': 2, 'course_id': 1, 'name_ru': name, 'author': author,
                       'supervisor': supervisor, 'publish_year': year,
-                      'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'}
+                      'secret_key': SECRET_KEY}
 
         upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
 
@@ -958,7 +959,7 @@ def get_2013():
         # Генерируем метаинформацию и загружаем
         thesis_info = {'type_id': 2, 'course_id': 1, 'name_ru': name, 'author': author,
                       'supervisor': supervisor, 'publish_year': year,
-                      'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'}
+                      'secret_key': SECRET_KEY}
 
         upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
 
@@ -1020,7 +1021,7 @@ def get_2013():
             # Генерируем метаинформацию и загружаем
             thesis_info = {'type_id': 2, 'course_id': 1, 'name_ru': name, 'author': author,
                            'supervisor': supervisor, 'publish_year': year,
-                           'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'}
+                           'secret_key': SECRET_KEY}
 
             upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
 
@@ -1080,9 +1081,9 @@ def get_2013():
 
         # Генерируем метаинформацию и загружаем
         # TODO: попросить у зеленчука добавить 361 группу в бд и поменять course_id
-        thesis_info = {'type_id': 2, 'course_id': 100500, 'name_ru': name, 'author': author,
+        thesis_info = {'type_id': 2, 'course_id': 5, 'name_ru': name, 'author': author,
                       'supervisor': supervisor, 'publish_year': year,
-                      'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'}
+                      'secret_key': SECRET_KEY}
 
         upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
 
@@ -1143,7 +1144,7 @@ def get_2013():
         # Генерируем метаинформацию и загружаем
         thesis_info = {'type_id': 2, 'course_id': 1, 'name_ru': name, 'author': author,
                       'supervisor': supervisor, 'publish_year': year,
-                      'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'}
+                      'secret_key': SECRET_KEY}
 
         upload_on_site(thesis_info, text_filename, slides_filename, supervisor_review_filename)
 
@@ -1183,7 +1184,7 @@ def bruteforce_2012():
     upload_one_report(
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Разработка 3D пиксельного движка', 'author': 'Осипов Никита Алексеевич',
          'supervisor': 'Оносовский', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/341_Osipov_report.doc',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/341_Osipov_review.pdf'
@@ -1193,7 +1194,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Фреймворки юнит-тестирования для С++',
          'author': 'Бажутин Михаил Сергеевич',
          'supervisor': 'Литвинов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Bazhutin_report.doc',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Bazhutin_review.pdf'
@@ -1202,7 +1203,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': '. Разработка 3D пиксельного графического движка',
          'author': 'Байцерова Юлия Сергеевна',
          'supervisor': 'Оносовский', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Baytserova_report.docx',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Baytserova_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Baytserova_review.pdf'
@@ -1211,7 +1212,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Терминальный Android-клиент для распределенных приложений на базе платформы Ubiq Mobile',
          'author': 'Бумаков Никита Вячеславович',
          'supervisor': 'Оносовский', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Bumakov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Bumakov_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Bumakov_review.pdf'
@@ -1220,7 +1221,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Статический анализ кода языка Ruby',
          'author': 'Денисов Юрий Борисович',
          'supervisor': 'Ушаков', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Denison_report.doc',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Denison_review.png'
@@ -1229,7 +1230,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Визуальный язык задания ограничений на модели в QReal',
          'author': 'Дерипаска Анна Олеговна',
          'supervisor': 'Литвинов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Deripaska_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Deripaska_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Deripaska_review.pdf'
@@ -1238,7 +1239,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Структура хранения индексов закэшированных страйпов и ссылок на них',
          'author': 'Дудин виктор Дмитриевич',
          'supervisor': 'Короткевич', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Dudin_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Dudin_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Dudin_review.jpg'
@@ -1247,7 +1248,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Разработка средства проверки корректности адресов возврата на платформе S2E',
          'author': 'Евард Вадим Евгеньевич',
          'supervisor': 'Зеленчук', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Evard_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Evard_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Evard_review.pdf'
@@ -1256,7 +1257,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Реализация механизмов виртуальной памяти для x86 архитектуры в ОСРВ Embox',
          'author': 'Ефимов Глеб Дмитриевич',
          'supervisor': 'Бондарев', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Efimov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Efimov_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Efimov_review.pdf'
@@ -1265,7 +1266,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Определение расстояния между точкой и множеством, представленным бинарной диаграммой решений',
          'author': 'Зубаревич Дмитрий Александрович',
          'supervisor': 'Бугайченко', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Zubarevich_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Zubarevich_presentation.pptx',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Zubarevich_review.docx'
@@ -1274,7 +1275,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Алгоритмы расчета RAID 6',
          'author': 'Калмук Александр Игоревич',
          'supervisor': 'Короткевич', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Kalmuk_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Kalmuk_review.jpg'
@@ -1283,7 +1284,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Инструмент для оценки алгоритмов дедупликации',
          'author': 'Кладов Алексей Александрович',
          'supervisor': 'Луцив', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Kladov_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Kladov_review.pdf'
@@ -1292,7 +1293,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Трассировки ОСРВ Embox',
          'author': 'Крамар Алина Сергеевна',
          'supervisor': 'Бондарев', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Kramar_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Kramar_review.pdf'
@@ -1301,7 +1302,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Поддержка механизма рефакторингов в metaCASE-системе QReal',
          'author': 'Кузенкова Анастасия Сергеевна',
          'supervisor': 'Литвинов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Kuzenkova_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Kuzenkova_review.pdf'
@@ -1310,7 +1311,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Реализация алгоритмов расчета RAID 6 с использованием встроенных функций SSE',
          'author': 'Макулов Рустам Наилевич',
          'supervisor': '', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Makulov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Makulov_presentation.pptx',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Makulov_review.jpg'
@@ -1319,7 +1320,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Переиспользование кода в визуальных языках программирования',
          'author': 'Нефёдов Ефим Андреевич',
          'supervisor': 'Литвинов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Nefedov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Nefedov_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Nefedov_review.pdf'
@@ -1328,7 +1329,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Исследование и тестирование семплирующего метода профайлинга на примере профилировщика производительности Intel VTune Amplifier XE 2011',
          'author': 'Одеров Роман Сергеевич',
          'supervisor': 'Баклановский', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Oderov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Oderov_presentation.pptx',
         supervisor_review_uri=''
@@ -1337,7 +1338,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Средства описания генераторов кода для предметно-ориентированных решений в metaCASE-средстве QReal',
          'author': 'Подкопаев Антон Викторович',
          'supervisor': ' Брыксин', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Podkopaev_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Podkopaev_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Podkopaev_review.pdf'
@@ -1346,7 +1347,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Интерпретация метамоделей в metaCASE-системе QReal',
          'author': 'Птахина Алина Ивановна',
          'supervisor': 'Литвинов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Ptakhina_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Ptakhina_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Ptakhina_review.pdf'
@@ -1355,7 +1356,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Модуль сбора информации о производительности процессоров Intel с использованием PMU для профайлера ядра ОС MS WS2008R2',
          'author': 'Серко Сергей Анатольевич',
          'supervisor': 'Баклановский', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Serko_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Serko_presentation.pdf',
         supervisor_review_uri=''
@@ -1364,7 +1365,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Юзабилити в проекте QReal:Robots',
          'author': 'Соковикова Наталья Алексеевна',
          'supervisor': 'Литвинов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Sokovikova_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Sokovikova_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Sokovikova_review.pdf'
@@ -1373,7 +1374,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Исследование эффективности дедупликации с использованием цепочек преобразований при помощи разработанного инструментального средства',
          'author': 'Соса Укатерина Андреевна',
          'supervisor': 'Луцив', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Sosa_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Sosa_review.pdf'
@@ -1382,7 +1383,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Архитектура и прототипирование metaCASE-системы',
          'author': 'Таран Кирилл Сергеевич',
          'supervisor': 'Брыксин', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Taran_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Taran_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Taran_review.pdf'
@@ -1391,7 +1392,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Алгоритмы расчёта RAID 6',
          'author': 'Тюшев Кирилл Игоревич',
          'supervisor': 'Короткевич', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Tyushev_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Tyushev_review.jpg'
@@ -1400,7 +1401,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Реализация уровня изоляции Read Committed для древовидных структур данных',
          'author': 'Федотовский Павел Валерьевич',
          'supervisor': 'Чернышев', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Fedotovskij_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Fedotovskij_presentation.pptx',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Fedotovskij_review.docx'
@@ -1409,7 +1410,7 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Выделение научных сообществ на основе анализа библиографических данных',
          'author': 'Филатов Владимир Константинович',
          'supervisor': 'Суворов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Filatov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Ibragimov_Filatov_presentation.pdf',
         supervisor_review_uri=''
@@ -1418,449 +1419,449 @@ def bruteforce_2012():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Сравнение распределителей памяти для многопоточного обработчика транзакций',
          'author': 'Чередник Кирилл Евгеньевич',
          'supervisor': 'Смирнов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Cherednik_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/345/345_Cherednik_review.doc'
     )
     # 361 группа
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Поисковые алгоритмы на блоке графического процессора',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Поисковые алгоритмы на блоке графического процессора',
          'author': 'Алексеев Илья Владимирович',
          'supervisor': 'Губанов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Alekseev_report.docx',
         slides_uri='',
         supervisor_review_uri=''
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Разработка редактора диаграмм для облачной технологии создания мобильных приложений',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Разработка редактора диаграмм для облачной технологии создания мобильных приложений',
          'author': 'Белокуров Дмитрий Николаевич',
          'supervisor': 'Брыксин', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Belokurov_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Belokurov_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Обзор реализации механизма циклической разработки диаграмм классов и программного кода в современных UML-средствах',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Обзор реализации механизма циклической разработки диаграмм классов и программного кода в современных UML-средствах',
          'author': '',
          'supervisor': 'Кознов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri=''
     ) # Не хватает отчества на сайте
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Стабилизация показаний G-сенсора при помощи камеры',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Стабилизация показаний G-сенсора при помощи камеры',
          'author': 'Говейнович Сергей Геннадьевич',
          'supervisor': 'Оносовский', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Goveynovich_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Goveynovich_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Разработка сети простых вычислительных процессоров и фильтра в рамках студенческого проекта МПВ',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Разработка сети простых вычислительных процессоров и фильтра в рамках студенческого проекта МПВ',
          'author': '',
          'supervisor': 'Кривошеин', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Zabranskiy_review.docx'
     ) # Не хватает отчества на сайте
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Разработка трехмерного игрового движка для игры под Android',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Разработка трехмерного игрового движка для игры под Android',
          'author': 'Зольников Павел Евгеньевич',
          'supervisor': 'Оносовский', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Zolnikov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Zolnikov_presentation.pptx',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Zolnikov_review.docx'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Создание подсистемы управления рисками: разработка бизнес-логики подсистемы',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Создание подсистемы управления рисками: разработка бизнес-логики подсистемы',
          'author': '',
          'supervisor': '', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri=''
     ) # Не хватает отчества на сайте
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Выделение научных сообществ на основе анализа библиографических данных',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Выделение научных сообществ на основе анализа библиографических данных',
          'author': '',
          'supervisor': '', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri=''
     ) # Не хватает отчества на сайте
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Анализ тональности текста',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Анализ тональности текста',
          'author': 'Калмыков Алексей Владимирович',
          'supervisor': 'Губанов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Kalmykov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Kalmykov_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Kalmykov_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Создание информационной подсистемы для распределенной подготовки стартапа',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Создание информационной подсистемы для распределенной подготовки стартапа',
          'author': '',
          'supervisor': '', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri=''
     ) # Не хватает отчества на сайте
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': ' Реализация эвристик языка ДРАКОН в metaCASE-средстве QReal',
+        {'type_id': 2, 'course_id': 5, 'name_ru': ' Реализация эвристик языка ДРАКОН в metaCASE-средстве QReal',
          'author': 'Колантаевская Анна Сергеевна',
          'supervisor': 'Брыксин', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Kolantaevskaya_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Kolantaevskaya_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': ' Тиражирование мобильных приложений для платформы iOS и Android',
+        {'type_id': 2, 'course_id': 5, 'name_ru': ' Тиражирование мобильных приложений для платформы iOS и Android',
          'author': 'Коршаков Степан Андреевич',
          'supervisor': 'Сабашный', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Korshakov_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Korshakov_review.doc'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Оценка сайта на наличие нежелательного контента',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Оценка сайта на наличие нежелательного контента',
          'author': '',
          'supervisor': '', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri=''
     ) # Не хватает отчества на сайте
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Разработка интерфейса программирования приложений и добавление скриптовой функциональности для ПО криминалистического анализа',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Разработка интерфейса программирования приложений и добавление скриптовой функциональности для ПО криминалистического анализа',
          'author': 'Макеев Давид Александрович',
          'supervisor': 'Губанов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Makeev_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Makeev_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Выделение человека на изображении',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Выделение человека на изображении',
          'author': 'Монькин Александр Александрович',
          'supervisor': 'Петров', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Monkin_S_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Monkin_S_review.jpeg'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Вычисление объема трехмерного объекта в задаче планирования хирургической операции',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Вычисление объема трехмерного объекта в задаче планирования хирургической операции',
          'author': 'Монькин Сергей Александрович',
          'supervisor': 'Петров', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Monkin_S_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Monkin_S_review.jpeg'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Трехмерная модель робота в QReal:Robots',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Трехмерная модель робота в QReal:Robots',
          'author': 'Павлов Сергей Николаевич',
          'supervisor': 'Брыксин', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Pavlov_report.pdf',
         slides_uri='',
         supervisor_review_uri=''
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Выделение групп пользователей в социальных сетях',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Выделение групп пользователей в социальных сетях',
          'author': '',
          'supervisor': '', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri=''
     ) # Не хватает отчества на сайте
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Реализация модулей ввода/вывода ПВП в связке с ядром DSP48E в рамках проекта МПВ',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Реализация модулей ввода/вывода ПВП в связке с ядром DSP48E в рамках проекта МПВ',
          'author': '',
          'supervisor': '', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri=''
     ) # Не хватает отчества на сайте
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Верификация дизассемблера x86-64',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Верификация дизассемблера x86-64',
          'author': 'Тенсин Егор Дмитриевич',
          'supervisor': 'Баклановский', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Tensin_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/361/361_Tensin_presentation.pdf',
         supervisor_review_uri=''
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Разработка модуля памяти для многоядерного потокового вычислителя',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Разработка модуля памяти для многоядерного потокового вычислителя',
          'author': '',
          'supervisor': '', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri=''
     ) # Не хватает отчества на сайте
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': ' Транслятор микрокода для многоядерного потокового вычислителя',
+        {'type_id': 2, 'course_id': 5, 'name_ru': ' Транслятор микрокода для многоядерного потокового вычислителя',
          'author': '',
          'supervisor': '', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri=''
     ) # Не хватает отчества на сайте
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Создание подсистемы управления рисками: разработка архитектуры подсистемы',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Создание подсистемы управления рисками: разработка архитектуры подсистемы',
          'author': '',
          'supervisor': '', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri=''
     ) # Не хватает отчества на сайте
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Создание генератора GLR трансляторов для .NET',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Создание генератора GLR трансляторов для .NET',
          'author': 'Авдюхин Дмитрий Алексеевич',
          'supervisor': 'Кириленко', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Avdyukhin_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Avdyukhin_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Организация надежных соединений через виртуальные каналы',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Организация надежных соединений через виртуальные каналы',
          'author': 'Бурдун Егор Федорович',
          'supervisor': 'Бондарев', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Burdun_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Burdun_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Алгоритм построения оценок весов интентов для многозначных запросов',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Алгоритм построения оценок весов интентов для многозначных запросов',
          'author': 'Григорьев Артем Валерьевич',
          'supervisor': 'Грауэр', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Grigoriev_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Grigoriev_presentation.pptx',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Grigoriev_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Обучение информатике в школах и ВУЗах на примере ОСРВ Embox',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Обучение информатике в школах и ВУЗах на примере ОСРВ Embox',
          'author': 'Дзендик Дарья Анатольевна',
          'supervisor': 'Бондарев', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Dzendzik_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Dzendzik_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Dzendzik_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Распознавание языка жестов на видео потоке',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Распознавание языка жестов на видео потоке',
          'author': 'Землянская Светлана Андреевна',
          'supervisor': 'Граничин', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Zemlyanskaya_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Zemlyanskaya_presentation.ppt',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Zemlyanskaya_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Генерация кода для платформы Ubiq Mobile',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Генерация кода для платформы Ubiq Mobile',
          'author': 'Иванов Всеволод Юрьевич',
          'supervisor': 'Литвинов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Ivanov_report.docx',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Ivanov_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Программная платформа для встраиваемых решений',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Программная платформа для встраиваемых решений',
          'author': 'Козлов Антон Павлович',
          'supervisor': 'Бондарев', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Kozlov_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Kozlov_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Повышение прозрачности сайта госзакупок РФ',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Повышение прозрачности сайта госзакупок РФ',
          'author': '',
          'supervisor': '', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri=''
     )  # Не хватает отчества на сайте
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Оптимизация вычислений за счет эффективных структур данных в ОС Embox',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Оптимизация вычислений за счет эффективных структур данных в ОС Embox',
          'author': 'Мальковский Николай Владимирович',
          'supervisor': 'Бондарев', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Malkovsky_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Malkovsky_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Malkovsky_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Механизм автоматической генерации мигратора базы данных информационной системы при изменениях модели предметной области',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Механизм автоматической генерации мигратора базы данных информационной системы при изменениях модели предметной области',
          'author': 'Михайлов Дмитрий Петрович',
          'supervisor': 'Нестеров', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Mikhaylov_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Mikhaylov_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Реализация настраиваемого графического представления элемента на диаграмме в QReal',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Реализация настраиваемого графического представления элемента на диаграмме в QReal',
          'author': 'Мордвинов Дмитрий Александрович',
          'supervisor': 'Брыксин', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Mordvinov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Mordvinov_presentation.ppt',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Mordvinov_review.doc'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Реализация алгоритма Semi-Global Matching',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Реализация алгоритма Semi-Global Matching',
          'author': '',
          'supervisor': '', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri=''
     ) # Не хватает отчества на сайте
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Статическая верификация для языка HaSCoL',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Статическая верификация для языка HaSCoL',
          'author': 'Найданов Дмитрий Геннадьевич',
          'supervisor': 'Медведев', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Naydanov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Naydanov_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Naydanov_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Реализация поддержки диалектов в YaccConstructor/YARD',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Реализация поддержки диалектов в YaccConstructor/YARD',
          'author': '',
          'supervisor': '', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri=''
     ) # Не хватает отчества на сайте
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Восстановление адресного пространства процесса из расширенного образа памяти на платформе Windows',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Восстановление адресного пространства процесса из расширенного образа памяти на платформе Windows',
          'author': 'Овчинников Антон Андреевич',
          'supervisor': 'Губанов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Ovchinnikov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Ovchinnikov_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Ovchinnikov_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Разработка системы для мониторинга и анализа ботнетов, распространяемых через веб приложения',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Разработка системы для мониторинга и анализа ботнетов, распространяемых через веб приложения',
          'author': 'Перевалова Марина Андреевна',
          'supervisor': 'Зеленчук', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Perevalova_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Perevalova_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Задача верификации лица на основе 3D модели',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Задача верификации лица на основе 3D модели',
          'author': 'Петров Николай Сергеевич',
          'supervisor': '', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Petrov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Petrov_presentation.ppt',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Petrov_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Средства создания визуальных интерпретаторов диаграмм в системе QReal',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Средства создания визуальных интерпретаторов диаграмм в системе QReal',
          'author': 'Поляков Владимир Александрович',
          'supervisor': 'Брыксин', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Polyakov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Polyakov_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Polyakov_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': ' Восстановление адресного пространства процесса из образа памяти с использованием файла подкачки на платформе Linux',
+        {'type_id': 2, 'course_id': 5, 'name_ru': ' Восстановление адресного пространства процесса из образа памяти с использованием файла подкачки на платформе Linux',
          'author': 'Свидерский Павел Юрьевич',
          'supervisor': 'Ãóáàíîâ', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Sviderski_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Sviderski_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Построение трёхмерной модели головы на основе трёхмерных анатомических признаков',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Построение трёхмерной модели головы на основе трёхмерных анатомических признаков',
          'author': 'Серебряков Сергей Николаевич',
          'supervisor': 'Петров', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Serebryakov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Serebryakov_presentation.ppt',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Serebryakov_review.jpg'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Инструмент анализа пользовательских логов поисковых систем',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Инструмент анализа пользовательских логов поисковых систем',
          'author': 'Солозобов Андрей Сергеевич',
          'supervisor': 'Грауэр', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Solozobov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Solozobov_presentation.pptx',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Solozobov_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Система мониторинга веб-сервисов',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Система мониторинга веб-сервисов',
          'author': 'Фефелов Алексей Андреевич',
          'supervisor': 'Строкан', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Fefelov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Fefelov_review.pdf',
         supervisor_review_uri=''
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': '3D Registration',
+        {'type_id': 2, 'course_id': 5, 'name_ru': '3D Registration',
          'author': 'Фоменко Екатерина Сергеевна',
          'supervisor': 'Пименов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Fomenko_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Fomenko_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Проектирование и реализация облачной metaCASE системы',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Проектирование и реализация облачной metaCASE системы',
          'author': 'Чижова Надежда Александровна',
          'supervisor': 'Литвинов', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Chizhova_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Chizhova_presentation.pptx',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Chizhova_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Практическая оценка качества различных средств HLS при синтезе из SystemC',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Практическая оценка качества различных средств HLS при синтезе из SystemC',
          'author': 'Шеин Роман Евгеньевич',
          'supervisor': 'Салищев', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Shein_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Shein_review.pdf'
     )
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': 'Автоматическое тестирование верстки web-интерфейсов',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Автоматическое тестирование верстки web-интерфейсов',
          'author': 'Шувалов Иннокентий Петрович',
          'supervisor': 'Ерошенко', 'publish_year': 2012,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Shuvalov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Shuvalov_presentation.pptx',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2012/YearlyProjects/2012/445/445_Shuvalov_review.pdf'
@@ -1873,7 +1874,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Синтаксический анализатор языка С',
          'author': 'Авдюхин Дмитрий Алексеевич',
          'supervisor': 'Кириленко', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Avdyukhin_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Avdyukhin_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Avdyukhin_review.odt'
@@ -1882,7 +1883,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Организация надёжных соединений через виртуальные каналы',
          'author': 'Бурдун Фёдор Викторович',
          'supervisor': 'Бондарев', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Burdun_report.pdf',
         slides_uri='',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Burdun_review.pdf'
@@ -1891,7 +1892,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Замена цвета выбранного элемента одежды в видеопотоке',
          'author': 'Григорьев Артем Валерьевич',
          'supervisor': 'Жуков', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Grigoryev_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Grigoryev_presentation.ppt',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Grigoryev_review.doc'
@@ -1900,7 +1901,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Графическая подсистема ОСРВ Embox для роботов LEGO Mindstorms NXT 2.0',
          'author': 'Дзендзик Дарья Анатольевна',
          'supervisor': 'Бондарев', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Dzendzik_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Dzendzik_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Dzendzik_review.pdf'
@@ -1909,7 +1910,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Фрактальный анализ рынка',
          'author': 'Землянская Светлана Андреевна',
          'supervisor': 'Ширяев', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Zemlyanskaya_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Zemlyanskaya_presentation.ppt',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Zemlyanskaya_review.jpg'
@@ -1918,7 +1919,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Алгоритмы вытеснения кэша. Применение алгоритмов в СХД и поиск возможностей их оптимизации для современных приложений.',
          'author': 'Колобов Роман Евгеньевич',
          'supervisor': 'Платонов', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Kolobov_report.doc',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Kolobov_presentation.odp',
         supervisor_review_uri=''
@@ -1927,7 +1928,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Помехоустойчивое свёрточное кодирование',
          'author': 'Коноплёв Юрий Михайлович',
          'supervisor': 'Татищев', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Konoplyov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Konoplyov_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Konoplyov_review.pdf'
@@ -1936,7 +1937,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Оптимизация потоков для операционной системы Embox',
          'author': 'Мальковский Николай Владимирович',
          'supervisor': 'Бондарев', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Malkovsky_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Malkovsky_presentation.pdf',
         supervisor_review_uri=''
@@ -1945,7 +1946,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Разработка декомпилятора языка Java SE 6',
          'author': 'Михайлов Дмитрий Петрович',
          'supervisor': 'Шафиров', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Mikhailov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Mikhailov_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Mikhailov_review.pdf'
@@ -1954,7 +1955,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Применение алгоритмов SuperResolution к лицам',
          'author': '',
          'supervisor': 'Пименов', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri=''
@@ -1963,7 +1964,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Создание средств визуального сравнения моделей в QReal',
          'author': 'Мордвинов Дмитрий Александрович',
          'supervisor': 'Брыксин', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Mordvinov_report.docx',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Mordvinov_presentation.ppt',
         supervisor_review_uri=''
@@ -1972,7 +1973,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Аппаратное ускорение задачи выравнивания строк на языке HaSCoL',
          'author': 'Найданов Дмитрий Геннадьевич',
          'supervisor': 'Медведев', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Naydanov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Naydanov_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Naydanov_review.pdf'
@@ -1981,7 +1982,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Предметно-ориентированное моделирование приложений для платформы Android',
          'author': 'Никонова Ольга Анатольевна',
          'supervisor': 'Брыксин', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Nikonova_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Nikonova_presentation.ppt',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Nikonova_review.pdf'
@@ -1990,7 +1991,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Внедрение шифрования в систему хранения данных высокой производительности',
          'author': 'Овчинников Антон Андреевич',
          'supervisor': 'Ершов', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Ovchinnikov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Ovchinnikov_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Ovchinnikov_review.pdf'
@@ -1999,7 +2000,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Определение положения камеры относительно плоского маркера',
          'author': '',
          'supervisor': 'Вахитов', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='',
         slides_uri='',
         supervisor_review_uri=''
@@ -2008,7 +2009,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Разработка визуального интерпретатора моделей в системе QReal',
          'author': 'Поляков Владимир Александрович',
          'supervisor': 'Брыксин', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Polyakov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Polyakov_presentation.ppt',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Polyakov_review.pdf'
@@ -2017,7 +2018,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Обнаружение узлов в сети',
          'author': 'Свидерский Павел Юрьевич',
          'supervisor': 'Смирнов', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Svidersky_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Svidersky_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Svidersky_review.doc'
@@ -2026,7 +2027,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Восстановление положения объекта известной формы по зашумлённым наблюдениям с помощью видеокамеры',
          'author': 'Серебряков Сергей Николаевич',
          'supervisor': 'Вахитов', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Serebryakov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Serebryakov_presentation.ppt',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345-Serebryakov-review.pdf'
@@ -2035,7 +2036,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Алгоритмы детектирующие и исправляющие ошибки в системах хранения данных уровня RAID 6',
          'author': 'Солозобов Андрей Сергеевич',
          'supervisor': 'Шевяков', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Solozobov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Solozobov_presentation.pdf',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Solozobov_review.jpg'
@@ -2044,7 +2045,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Инструменты анализа данных метилирования генов в цепочке ДНК',
          'author': 'Фоменко Екатерина Сергеевна',
          'supervisor': 'Вяххи', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Fomenko_report.doc',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Fomenko_presentation.pptx',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Fomenko_review.doc'
@@ -2053,7 +2054,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Библиотека алгоритмов поиска подстрок в тексте с препроцессингом в применении к биоинформатике',
          'author': 'Чижова Надежда Александровна',
          'supervisor': 'Вяххи', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Chizhova_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Chizhova_presentation.pptx',
         supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Chizhova_review.doc'
@@ -2062,7 +2063,7 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Реализация конфигурируемого аппаратного блока для вычисления быстрого преобразования Фурье переменной длины по смешанному основанию с использованием HLS',
          'author': 'Шеин Роман Евгеньевич',
          'supervisor': 'Салищев', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Shein_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Shein_presentation.pdf',
         supervisor_review_uri=''
@@ -2071,26 +2072,261 @@ def bruteforce_2011():
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Восстановление смазанных или размытых зашумлённых изображений',
          'author': 'Шувалов Иннокентий Петрович',
          'supervisor': 'Вахитов', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
+         'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Shuvalov_report.pdf',
         slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Shuvalov_presentation.odp',
         supervisor_review_uri=''
     )
     # 361 группа
     upload_one_report(
-        {'type_id': 2, 'course_id': 100500, 'name_ru': '',
-         'author': '',
-         'supervisor': '', 'publish_year': 2011,
-         'secret_key': '7fa15fc01c79c7378910cd7c6ee6e0f9'},
-        text_uri='',
-        slides_uri='',
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Аппаратное ускорение алгоритмов компьютерного зрения',
+         'author': 'Стефан Бояровски',
+         'supervisor': 'Шувалкин', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Boyarovski_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Boyarovski_presentation.ppt',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Boyarovski_review.rtf'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Система проверки данных на полноту',
+         'author': 'Карымов Антон Вячеславович',
+         'supervisor': 'Графеев', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Karymov_report.docx',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Karymov_presentation.pptx',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Karymov_review.jpg'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Детектор элементов лица для построения псевдотрехмерной графики',
+         'author': 'Лебедев Дмитрий',
+         'supervisor': 'Пименов', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Lebedev_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Lebedev_presentation.ppt',
         supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Публикация документов в SharePoint 2010',
+         'author': 'Рябиченко Павел Николаевич',
+         'supervisor': 'Дейкало', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Ryabichenko_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Ryabichenko_presentation.pdf',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Ryabichenko_review.pdf'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Разработка Eclipse плагина для программирования на языке haXe',
+         'author': 'Савенко Мария Олеговна',
+         'supervisor': 'Полозов', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Savenko_report.docx',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Savenko_presentation.pptx',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Savenko_review.odt'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Об оценке частоты устройств, разрабатываемых на языке HaSCoL',
+         'author': 'Скородумов Кирилл Владимирович',
+         'supervisor': 'Булычев', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Skorodumov_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Skorodumov_presentation.pdf',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 5, 'name_ru': 'Трансформация поисковых запросов в распределенных системах web-сервисов',
+         'author': 'Солодка Анастасия Сергеевна',
+         'supervisor': 'Новиков', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Solodkaya_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Solodkaya_presentation.pdf',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/361/361_Solodkaya_review.pdf'
+    )
+    # 445 группа
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Улучшение автодополнения для языка Groovy в IDE IntelliJ IDEA',
+         'author': 'Абишев Тимур Маратович',
+         'supervisor': 'Мухин', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Abishev_report.docx',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Abishev_presentation.pdf',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Abishev_review.doc'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Программные инструменты и алгоритмы для определения информации о последовательности нуклеотидов по ее местоположению в геноме человека',
+         'author': 'Алеев Алексей Валерьевич',
+         'supervisor': 'Вяххи', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Aleev_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Aleev_presentation.ppt',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Aleev_review.jpeg'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Генерация объектной модели для DocsVision и использование ее при синхронизации сервисов',
+         'author': 'Астащенко Александр Евгеньевич',
+         'supervisor': 'Шистеров', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Astaschenko_report.docx',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Astaschenko_presentation.pptx',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Astaschenko_review.docx'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Семантическое автодополнение',
+         'author': 'Василинец Сергей Павлович',
+         'supervisor': 'Хитров', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Vasilinets_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Vasilinets_presentation.pdf',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Vasilinets_review.pdf'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Erlang. Статический и динамический анализ',
+         'author': 'Гущина Вера Михайловна',
+         'supervisor': 'Урбанович', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Gushchina_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Gushchina_presentation.pdf',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Gushchina_review.pdf'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Исправление краевых дефектов 3D скана лица и торса',
+         'author': 'Добролеж Анна Борисовна',
+         'supervisor': 'Антипов', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Dobrolezh_report.doc',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Dobrolezh_presentation.ppt',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Dobrolezh_review.pdf'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Обработка структурных изменений источника данных в ETL процессах',
+         'author': 'Долбешкин Андрей Николаевич',
+         'supervisor': 'Дольник', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Dolbeshkin_report.docx',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Dolbeshkin_presentation.pptx',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Dolbeshkin_review.docx'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Алгоритм приближённого join’а на потоках данных',
+         'author': 'Землянский Юрий Андреевич',
+         'supervisor': 'Новиков', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Zemlyanskiy_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Zemlyanskiy_presentation.pptx',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Zemlyanskiy_review.pdf'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Разработка инструментария для создания искусственных нейронных сетей на мобильных платформах на примере iOS',
+         'author': 'Золотухина Алина Игоревна',
+         'supervisor': 'Торегожин', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Zolotukhina_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Zolotukhina_presentation.ppt',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Zolotukhina_review.jpg'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Обеспечение надёжности и высокой доступности кластера СХД',
+         'author': 'Котов Юрий Александрович',
+         'supervisor': 'Богатырев', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Kotov_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Kotov_presentation.pdf',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Kotov_review.pdf'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Улучшение четкости и качества распознавания изображений роботов для системы SSL-Vision',
+         'author': 'Кочанова Татьяна',
+         'supervisor': 'Данилова', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Kochanova_report.docx',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Kochanova_presentation.ppt',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Kochanova_review.doc'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Сервер морфинга протеинов',
+         'author': 'Лушников Андрей Сергеевич',
+         'supervisor': 'Вяткина', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Lushnikov_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Lushnikov_presentation.pdf',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Lushnikov_review.pdf'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Мотоциклетные графы и их свойства',
+         'author': 'Мальчевский Михаил Андреевич',
+         'supervisor': 'Вяткина', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Malchevsky_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Malchevsky_presentation.pdf',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Разработка и апробация инструментария iOSNeuron для решения задач распознавания изображений',
+         'author': 'Манаев Дмитрий Сергеевич',
+         'supervisor': 'Торегожин', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Manayev_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Manayev_presentation.ppt',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Manayev_review.jpg'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Исследование оптимизации запросов в СУБД',
+         'author': 'Нишневич Анастасия Юрьевна',
+         'supervisor': 'Новиков', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Nishnevich_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Nishnevich_presentation.pptx',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Nishnevich_review.doc'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Метапрограммирование в .NET. Интерпретация Common Lisp',
+         'author': 'Омельчук Александр Олегович',
+         'supervisor': 'Полозов', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Omelchuk_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Omelchuk_presentation.pdf',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Многоштриховые жесты мышью в проекте QReal',
+         'author': 'Осечкина Мария Сергеевна',
+         'supervisor': 'Литвинов', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Osechkina_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Osechkina_presentation.pdf',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Osechkina_review.odt'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Нахождение сайтов начала репликации в ДНК человека',
+         'author': 'Ромашкин Амир Сергеевич',
+         'supervisor': 'Порозов', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Romashkin_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Romashkin_presentation.ppt',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Romashkin_review.jpg'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Построение мотоциклетного графа',
+         'author': 'Титов Артем Юрьевич',
+         'supervisor': 'Вяткина', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Titov_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Titov_presentation.ppt',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Titov_review.pdf'
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Семантическое автодополнение',
+         'author': 'Удалов Александр Николаевич',
+         'supervisor': 'Хитров', 'publish_year': 2011,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Udalov_report.pdf',
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Udalov_presentation.pdf',
+        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/445/445_Udalov_review.pdf'
     )
 
 if __name__ == '__main__':
-    bruteforce_2011()
+    # bruteforce_2011()
     # bruteforce_2012()
-    # get_2013() пока нельзя запускать, надо дождаться добавления нового направления в бд
+    get_2013()
     # get_2014()
     # get_2015_spring()
     # get_2015_fall()
