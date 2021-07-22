@@ -11,7 +11,7 @@ import re
 import json
 import docx
 
-SECRET_KEY = 'ef6e24c6171bf25ae812cc976d6119e5'
+SECRET_KEY = '8795e9a6d5199969b1f8e6385a15055b'
 UPLOAD_URL = "https://se.math.spbu.ru/post_theses"
 TEXT_PATH = "/media/stepan-trefilov/Share/report/text/"
 SLIDES_PATH = "/media/stepan-trefilov/Share/report/slides/"
@@ -1961,8 +1961,8 @@ def bruteforce_2011():
          'supervisor': 'Пименов', 'publish_year': 2011,
          'secret_key': SECRET_KEY},
         text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Mokaev_report.pdf',
-        slides_uri='',
-        supervisor_review_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Mokaev_presentation.pptx'
+        slides_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2011/YearlyProjects/2011/345/345_Mokaev_presentation.pptx',
+        supervisor_review_uri=''
     )
     upload_one_report(
         {'type_id': 2, 'course_id': 1, 'name_ru': 'Создание средств визуального сравнения моделей в QReal',
@@ -2774,9 +2774,301 @@ def bruteforce_2010():
         supervisor_review_uri=''
     )
 
+
+def bruteforce_2009():
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Параллельная реализация алгоритма ACO',
+         'author': 'Дырдина Анна Викторовна',
+         'supervisor': 'Вахитов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Dyrdina_Anna.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Интеграция технологии DocLine с системой разработки документации Adobe',
+         'author': 'Дорохов Вадим Александрович',
+         'supervisor': 'Романовский', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Dorokhov_Vadim.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Интеграция мультимедиа решений с аппаратным ускорением для MID устройства',
+         'author': 'Елизаров Егор Алексеевич',
+         'supervisor': 'Иванов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Elisarov_Egor.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Конвертор приложений Windows Forms в приложения Silverlight',
+         'author': 'Гагарский Алексей Константинович',
+         'supervisor': 'Губанов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Gagarsky_Alexey.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Расширение функциональности Entity Framework',
+         'author': 'Хритошин Даниил Викторович',
+         'supervisor': 'Евдокимов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Khritoshin_Daniil.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Создание среды разработки библиотек формул подсчета технико-экономических показателей теплоэлектростанций',
+         'author': 'Иноземцев Дмитрий Сергеевич',
+         'supervisor': 'Иванов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Inozemtsev_Dmitry.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Массовая задача построения маршрутов движения судов',
+         'author': 'Кудасов Федор Сергеевич',
+         'supervisor': 'Кариженский', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Kudasov_Fyodor.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Автоматизация отслеживания состояния покрытия автомобильных дорог. Использование мобильных устройств, оснащённых акселерометром и устройством определения местоположения для определения состояния дорожного покрытия и для обнаружения дефектов дорожного полотна',
+         'author': 'Леви Сергей',
+         'supervisor': 'Сабашный', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Levi_Sergei.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Разработка SIP телефонии для операционной системы Google Android',
+         'author': 'Малышев Виталий',
+         'supervisor': 'Сафонов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Malyshev_Vitaly.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Разработка приложения для платформы Google Android',
+         'author': 'Морозков Михаил Андреевич',
+         'supervisor': 'Замышляев', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Morozkov_Mikhail.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Разработка расширения языка Java для работы с реляционными базами данных',
+         'author': 'Никитин Павел Антонович',
+         'supervisor': 'Гуров', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Nikitin_Pavel.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Декомпозиция временных рядов в СУБД Oracle',
+         'author': 'Подкорытов Сергей',
+         'supervisor': 'Графеева', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Podkorytov_Sergei.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Создание языка для проверки свойств контекстно-свободных грамматик',
+         'author': 'Силина Ольга Александровна',
+         'supervisor': 'Бреслав', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Silina_Olga.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Библиотека алгоритмов на графах для платформы .NET',
+         'author': 'Суханов Василий',
+         'supervisor': 'Кириленко', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Sukhanov_Vasily.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Разработка программного обеспечения системы программно-аппаратной защиты ПО',
+         'author': 'Теплых Дарья Анатольевна',
+         'supervisor': 'Татищев', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Teplyh_Daria.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Расширение функциональности графического редактора языка DRL',
+         'author': 'Василик Дмитрий',
+         'supervisor': 'Романовский', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Vasilik_Dmitry.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'C++ APPLICATION SECURITY TOOLSET',
+         'author': 'Ростислав Игоревич Чутков',
+         'supervisor': 'Штукенберг', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/444_Chutkov_Rostislav.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    # 445 группа
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Поддержка языка Lisa в среде Eclipse',
+         'author': 'Алеев Константин',
+         'supervisor': 'Иванов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/445_Aleev_Konstantin.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Инструмент аспектно-ориентированного программирования Aspect.Java',
+         'author': 'Андриевский Евгений Валерьевич',
+         'supervisor': 'Сафонов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/445_Andrievsky_Evgeny.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Разработка framework для JSR 290 TCK',
+         'author': 'Евстифеев Сергей Викторович',
+         'supervisor': 'Исаенко', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/445_Evstifeev_Sergei.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Распознавание автомобильных номеров с помощью нейронных сетей',
+         'author': 'Федяшов Виктор',
+         'supervisor': 'Пименов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/445_Fedyashov_Victor.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Создание дискретизирующего фильтра для обработки электроокулограмм. Повышение точности определения амплитуды сигнала',
+         'author': 'Храмцова Елена Александровна',
+         'supervisor': 'Белов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/445_Khramtsova_Elena.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Реализация подключения виртуальной машины Neko к http-серверу с помощью интерфейса FastCGI',
+         'author': 'Ларчик Евгений Владимирович',
+         'supervisor': 'Плискин', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/445_Larchik_Evgeny.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Создание среды разработки для языка программирования OCaml',
+         'author': 'Мануйлов Максим Игоревич',
+         'supervisor': 'Шафиров', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/445_Manuilov_Maxim.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Cоздание дискретизирующего фильтра для обработки электроокулограмм. Обеспечение работы и настройки фильтра в режиме реального времени',
+         'author': 'Медведев Алексей Михайлович',
+         'supervisor': 'Белов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/445_Medvedev_Alexey.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Язык для описания плагинов в среде программирования JetBrains MPS',
+         'author': 'Мухин Михаил',
+         'supervisor': 'Соломатов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/445_Mukhin_Mikhail.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Применение нейронных сетей к ранжированию результатов информационного поиска',
+         'author': 'Петров Александр Георгиевич',
+         'supervisor': 'Вахитов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/445_Petrov_Alexander.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Поиск оптимального ректификационного преобразования',
+         'author': 'Смирнова Ольга',
+         'supervisor': 'Пименов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/445_Smirnova_Olga.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Акторное расширение языка Java в среде MPS',
+         'author': 'Жукова Анна Руслановна',
+         'supervisor': 'Мазин', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/445_Smirnova_Olga.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Исследование работы с географическими данными в Oracle 10g',
+         'author': 'Залог Леонид Витальевич',
+         'supervisor': 'Графеева', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/445_Zalog_Leonid.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Создание физически-корректного дождя и сопутствующих эффектов',
+         'author': 'Шевченко Андрей Игоревич',
+         'supervisor': 'Пименов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/445_Shevchenko_Andrei.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+    upload_one_report(
+        {'type_id': 2, 'course_id': 1, 'name_ru': 'Модульная платформа для распознования автомобильных номеров',
+         'author': 'Чирков Иван Викторович',
+         'supervisor': 'Пименов', 'publish_year': 2009,
+         'secret_key': SECRET_KEY},
+        text_uri='https://oops.math.spbu.ru/SE/YearlyProjects/2009/YearlyProjects/2009/445_Chirkov_Ivan.7z',
+        slides_uri='',
+        supervisor_review_uri=''
+    )
+
 if __name__ == '__main__':
-    bruteforce_2010()
-    # bruteforce_2011()
+    # bruteforce_2010()
+    bruteforce_2011()
     # bruteforce_2012()
     # get_2013()
     # get_2014()
